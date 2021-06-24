@@ -1,5 +1,4 @@
-//'npm init' to install packages
-//'npm i inquirer' to install inquirer
+//'npm i' to install packages
 
 // TODO: Include packages needed for this application
 const fs = require('fs');
@@ -99,7 +98,7 @@ function writeToFile(fileName, data) {
     if (err) {
       return console.log(err);
     }
-    console.log('Your new generated README is ready')
+    console.log('Your new README.md file is ready. Thank you for using README-Generator!')
   });
 }
 
