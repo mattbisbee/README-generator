@@ -1,11 +1,11 @@
 
-  # README Generator
+  # mm
 
   ## **Description**
-  This CLI will prompt the user for information about the project and generate a professional README file
+  mm
 
   ## **Images**
-  ![Project](develop/assets/images/capture.jpg)
+  ![](assets/images/)
   
   ## **Table of Contents**
   
@@ -29,26 +29,26 @@
   
 
   ## **License**
-  
+  ![License](https://img.shields.io/badge/License-MIT-orange?style=plastic&logo=appveyor.svg)
   <br>
-  
+  https://opensource.org/licenses/MIT
   <br>
 
   ## **Features**
-  [Demo Video](https://drive.google.com/file/d/153XDhCs8-_psQP4W_oevHuNSxC1-nmUP/view)
+  
 
   ## **Languages**
-  JavaScript,Inquirer,Node JS
+   CSS, HTML, JavaScript, Inquirer, Node JS
 
   ## **Technology**
-  [Inquirer](https://www.npmjs.com/package/inquirer) <br> [Node JS](https://nodejs.org/en/) <br> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
+  
 
   ## **Tests**
-  There are no tests for this yet
+  In the terminal, type: npm test
 
   ## **Contribute**
-  Find me on [GitHub](https://www.github.com/mattbisbee)
+  Find me on [GitHub](https://www.github.com/mm)
   <br>
-  Send me an [Email](mailto:aldhelm7@gmail.com)
+  Send me an [Email](mailto:mm)
   <br>
   [Contributor Covenant](https://www.contributor-covenant.org/)

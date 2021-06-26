@@ -118,19 +118,19 @@ const questions = [
     choices: [
       new inquirer.Separator(' = The Languages = '),
       {
-        name: 'CSS',
+        name: ' CSS',
       },
       {
-        name: 'HTML',
+        name: ' HTML',
       },
       {
-        name: 'JavaScript',
+        name: ' JavaScript',
       },
       { 
-        name:'Inquirer',
+        name:' Inquirer',
       }, 
       {
-        name: 'Node JS',
+        name: ' Node JS',
       } 
     ],
     // Use this code if you want to make this answer required
@@ -154,7 +154,9 @@ const questions = [
     message: 'Please describe how the user can collaborate with you on this project. (Optional)',
     default: '[Contributor Covenant](https://www.contributor-covenant.org/)'
   },
+
 ];
+
 
 // This is a function to write README file
 function writeToFile(fileName, data) {
