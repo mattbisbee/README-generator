@@ -10,7 +10,7 @@ const questions = [
   {
     type: 'input',
     name: 'title',
-    message: 'Please enter the name of your project. (Required)',
+    message: 'Please enter the title of your project. (Required)',
     validate: (titleName) => {
       if (titleName) {
         return true;
@@ -19,10 +19,24 @@ const questions = [
       }
     }
   },
+
+  {
+    type: 'input',
+    name: 'description',
+    message: 'Please provide a short description of your project. (Required)',
+    validate: (describeProject) => {
+      if  (describeProject) {
+        return true;
+      } else {
+        return 'Please provide a project description!'
+      }
+    }
+  },
+
   {
     type: 'input',
     name: 'github',
-    message: 'Please entrer your GitHub username. (Required)',
+    message: 'Please enter your GitHub username. (Required)',
     validate: (githubUsername) => {
       if (githubUsername) {
         return true;
@@ -44,52 +58,52 @@ const questions = [
       }
     }
   },
-
-  {
-    type: 'input',
-    name: 'description',
-    message: 'Please provide a short description of your project. (Required)',
-    validate: (describeProject) => {
-      if  (describeProject) {
-        return true;
-      } else {
-        return 'Please provide a project description!'
-      }
-    }
-  },
-
+  
   {
     type: 'list',
     name: 'license',
-    message: 'What kind of license should your project have? (use arrow keys)',
-    choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3', 'None' ],
+    message: 'What kind of license should your project have? Use arrow keys to scroll; enter to select.',
+    choices: ['MIT', 'Apache', 'GNU', 'BSD', 'None' ],
   },
-
+  
   {
     type: 'input',
     name: 'dependencies',
-    message: 'What command should run the install dependencies?',
-    default: 'npm i'
+    message: 'What command should be run to install dependencies?',
+    default: 'In the terminal, type: npm i'
   },
-
+  
   {
     type: 'input',
-    name: 'test',
+    name: 'tests',
     message: 'What command should be used to run tests?',
-    default: 'npm test'
+    default: 'In the terminal, type: npm test'
+  },
+  
+  {
+    type: 'input',
+    name: 'credits',
+    message: 'Please add all collaborators that worked on the project. (Optional)'
   },
 
   {
     type: 'input',
     name: 'usage',
-    message: 'What does the user need to know about using the repo?',
+    message: 'Please describe anything the user needs to know about using the repo. (Optional)',
   },
 
   {
     type: 'input',
     name: 'contribute',
-    message: 'What does the user need to know about contributing to this project?'
-  }
+    message: 'Please describe how the user can collaborate with you on this project. (Optional)'
+  },
+
+  {
+    type: 'input',
+    name: 'features',
+    message: 'Please add any features or demonstrations here. (Optional)',
+  },
+
 ];
 
 // TODO: Create a function to write README file
@@ -98,7 +112,7 @@ function writeToFile(fileName, data) {
     if (err) {
       return console.log(err);
     }
-    console.log('Your new README.md file is ready. Thank you for using README-Generator!')
+    console.log('Your new README.md file is now ready. Thank you for using README-Generator!')
   });
 }
 
