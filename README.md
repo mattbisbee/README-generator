@@ -5,7 +5,7 @@
   This CLI will prompt the user for information about the project and generate a professional README file
 
   ## **Images**
-  ![Project](./develop/assets/images/capture.jpg)
+  ![Project](develop/assets/images/capture.jpg)
   
   ## **Table of Contents**
   
