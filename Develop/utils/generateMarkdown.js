@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// This is function that returns a license badge based on which license is passed in. If there is no license it returns an empty string.
 function renderLicenseBadge(license) {
   if (license !== 'None') {
     return `![License](https://img.shields.io/badge/License-${license}-orange?style=plastic&logo=appveyor.svg)`
@@ -8,8 +7,7 @@ function renderLicenseBadge(license) {
   };
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// This is a function that returns the license link. If there is no license it returns an empty string
 function renderLicenseLink(license) {
   switch (license) {
     case 'MIT': return 'https://opensource.org/licenses/MIT';
@@ -20,27 +18,16 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== "None") {
-    return `
-    ${renderLicenseBadge}
-    <br>
-    'For more information on this license, please visit: ${renderLicenseLink}'
-    `
-  } else {
-    return ' ';
-  }
-}
-
-// TODO: Create a function to generate markdown for README
+// This is a function that generates markdown for new README.md file
 function generateMarkdown(data) {
   return `
   # ${data.title}
 
   ## **Description**
   ${data.description}
+
+  ## **Images**
+  ![${data.altText}](assets/images/${data.images})
   
   ## **Table of Contents**
   
@@ -49,8 +36,10 @@ function generateMarkdown(data) {
   * [Credits](#credits)
   * [License](#license)
   * [Features](#features)
-  * [Contribute](#contribute)
+  * [Languages](#languages)
+  * [Technology](#technology)
   * [Tests](#tests)
+  * [Contribute](#contribute)
   
   ## **Installation**
   ${data.dependencies}
@@ -70,19 +59,24 @@ function generateMarkdown(data) {
   ## **Features**
   ${data.features}
 
+  ## **Languages**
+  ${data.languages}
+
+  ## **Technology**
+  ${data.technology}
+
+  ## **Tests**
+  ${data.tests}
+
   ## **Contribute**
   Find me on [GitHub](https://www.github.com/${data.github})
   <br>
   Send me an [Email](mailto:${data.email})
   <br>
   ${data.contribute}
-
-  ## **Tests**
-  ${data.tests}
 `;
 }
 
 module.exports = generateMarkdown;
 renderLicenseBadge();
 renderLicenseLink();
-renderLicenseSection();
